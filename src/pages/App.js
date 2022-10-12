@@ -1,9 +1,11 @@
 import React from "react";
+import Generador from "../components/generator";
+
 
 export default function App(){
     return(
         <div>
-            <h1>Buenas hola</h1>
+            <Generador/>
         </div>
     )
 }
