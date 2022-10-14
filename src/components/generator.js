@@ -5,22 +5,28 @@ export default function Generador(){
 
     const GenerarPassword = () => {
         const range = document.querySelector('#range').value
+        const mostrarContraseña = document.querySelector('#generator')
+        //Creamos un string como diferentes letras y signos para tomarlos
         const Caracteres = "ABCDFGHIJKLMNÑOPQRSTUVWXYZabcdfghijklmnñopqrstuvwxyz12345678910$#()?!¡&%^+*-'"
         let password = ''
 
+        //Recorremos el segun la cantidad de carcateres que elija el usuario
         for (let i = 0; i < range; i++) {
+            //Se escoje al azar con ramdon las letras
             const random = Math.floor(Math.random() * Caracteres.length)
+            //le pasamos la nueva contraseña a la variable
             password += Caracteres.substring(random, random + 1)
         }
 
-        console.log(password)
+        //se añade el resultado al valor del input para mostrarlo
+        mostrarContraseña.value = password
     }
 
     return(
         <Container>
             <ContainerGenerator>
                 <Title>Generator of Password</Title>
-                <InputGenerator/>
+                <InputGenerator id="generator" value=''/>
                 <Anuncio>Number of characters</Anuncio>
                 <ContainerFlex>
                     <Num>Min 8</Num>
