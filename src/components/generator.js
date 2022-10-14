@@ -3,9 +3,17 @@ import { Container, ContainerGenerator, InputRange, Button, InputGenerator, Titl
 
 export default function Generador(){
 
-    const GenerarPassword = () =>{
-        const range = document.querySelector('#range')
-        console.log(range.value)
+    const GenerarPassword = () => {
+        const range = document.querySelector('#range').value
+        const Caracteres = "ABCDFGHIJKLMNÑOPQRSTUVWXYZabcdfghijklmnñopqrstuvwxyz12345678910$#()?!¡&%^+*-'"
+        let password = ''
+
+        for (let i = 0; i < range; i++) {
+            const random = Math.floor(Math.random() * Caracteres.length)
+            password += Caracteres.substring(random, random + 1)
+        }
+
+        console.log(password)
     }
 
     return(
@@ -20,7 +28,7 @@ export default function Generador(){
                     <Num>Max 12</Num>
                 </ContainerFlex>
                 <ContainerButtons>
-                    <Button id="range" type="button" onClick={()=>GenerarPassword()}>Trigger</Button>
+                    <Button id="range" type="button" onClick={() => GenerarPassword()}>Trigger</Button>
                     <Button>Copy</Button>
                 </ContainerButtons>
             </ContainerGenerator>

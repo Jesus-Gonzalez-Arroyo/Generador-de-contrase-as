@@ -18,8 +18,8 @@ export const Container = styled.div`
 
 export const ContainerGenerator = styled.div`
     width: 97%;
-    height: 430px;
-    min-width: 300px;
+    height: 500px;
+    min-width: 310px;
     max-width: 100%;
     margin: auto;
     padding: 5px;
