@@ -22,6 +22,17 @@ export default function Generador(){
         mostrarContraseña.value = password
     }
 
+    const copiarAlPortapapeles = () => {
+        const mostrarContraseña = document.querySelector('#generator')
+        mostrarContraseña.select();
+        document.execCommand("copy")
+        try {
+            alert('Copiado')
+        } catch (error) {
+            alert(error)
+        }
+    }
+
     return(
         <Container>
             <ContainerGenerator>
@@ -35,7 +46,7 @@ export default function Generador(){
                 </ContainerFlex>
                 <ContainerButtons>
                     <Button id="range" type="button" onClick={() => GenerarPassword()}>Trigger</Button>
-                    <Button>Copy</Button>
+                    <Button onClick={() => copiarAlPortapapeles('generator')}>Copy</Button>
                 </ContainerButtons>
             </ContainerGenerator>
         </Container>
