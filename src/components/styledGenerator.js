@@ -9,11 +9,11 @@ export const Anuncio = styled.p`
 
 export const Container = styled.div`
     width: 410px;
-    margin: 90px auto;
+    margin: 55px auto;
     text-align: center;
     border-radius: 10px;
     box-shadow: 5px 5px 10px #000;
-    background: #FFCA03;
+    background: #34626C;
 `
 
 export const ContainerGenerator = styled.div`
@@ -33,9 +33,12 @@ export const H1 = styled.h1`
 `
 
 export const InputGenerator = styled.input`
-    width: 60%;
-    margin: 60px auto;
+    width: 70%;
+    margin: 80px auto;
     padding: 10px;
+    border: 0;
+    border-radius: 10px;
+    text-align: center;
     font-family: "Segoe UI";
     font-size: 20px;
     display: block;
@@ -62,9 +65,12 @@ export const Button = styled.button`
     width: 150px;
     margin : 50px auto;
     padding: 10px;
+    border: 0;
+    border-radius: 10px;
     font-family: "Segoe UI";
     font-size: 15px;
     display: block;
+    background: #839B97;
 `
 export const ContainerButtons = styled.div`
     width: 80%;
