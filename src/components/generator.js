@@ -7,7 +7,7 @@ export default function Generador(){
         const range = document.querySelector('#range').value
         const mostrarContraseña = document.querySelector('#generator')
         //Creamos un string como diferentes letras y signos para tomarlos
-        const Caracteres = "ABCDFGHIJKLMNÑOPQRSTUVWXYZabcdfghijklmnñopqrstuvwxyz12345678910$#()?!¡&%^+*-'"
+        const Caracteres = "A%!DFGH¨I12345;678?`910JK}NÑ!¡&%OPQR:.-{VWXYZ$#()?!¡&%^+*-'abcd^{fghi,jklm=-:nño12678;910pqrsvwxyz"
         let password = ''
 
         //Recorremos el segun la cantidad de carcateres que elija el usuario
@@ -23,8 +23,11 @@ export default function Generador(){
     }
 
     const copiarAlPortapapeles = () => {
+        //Selecciona el elemento
         const mostrarContraseña = document.querySelector('#generator')
+        //Se selecciona el campo por medio de select
         mostrarContraseña.select();
+        //Con este comando copiamos el valor al portapapeles
         document.execCommand("copy")
         try {
             alert('Copiado')
@@ -45,7 +48,7 @@ export default function Generador(){
                     <Num>Max 12</Num>
                 </ContainerFlex>
                 <ContainerButtons>
-                    <Button id="range" type="button" onClick={() => GenerarPassword()}>Trigger</Button>
+                    <Button id="range" type="button" onClick={() => GenerarPassword()}>Create</Button>
                     <Button onClick={() => copiarAlPortapapeles('generator')}>Copy</Button>
                 </ContainerButtons>
             </ContainerGenerator>
